@@ -185,10 +185,9 @@ namespace API.Controllers
 
                 // Add image to database
                 await _imageService.AddAsync(imageEntity);
-                var userId = _loginService.GetLoggedInUserId();
                 var productEntity = new ProductEntity
                 {
-                    UserId = userId,
+                    UserId = model.UserId,
                     CategoryId = model.CategoryId,
                     ImageId = imageEntity.Id,
                     Label = model.Label,
