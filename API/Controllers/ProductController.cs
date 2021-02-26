@@ -54,10 +54,7 @@ namespace API.Controllers
             var products = await _productService.GetAllAsync();
 
             _logger.LogInformation($"Received {products.Count} products from the database.");
-            
-            Console.WriteLine(products[0].UserId);
-            Console.WriteLine(products[0].User);
-            
+
             return Json(products.Select(x => x.ToProductResponseModel()).ToList());
         }
 

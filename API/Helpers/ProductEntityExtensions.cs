@@ -29,6 +29,7 @@ namespace API.Helpers
                 },
                 User = new ProductReponseModel.UserResponseModel
                 {
+                    Id = productEntity.User.Id,
                     FirstName = productEntity.User.FirstName,
                     LastName = productEntity.User.LastName,
                     Email = productEntity.User.Email

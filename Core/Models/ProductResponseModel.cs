@@ -59,6 +59,12 @@ namespace Core.Models
         
         public sealed class UserResponseModel
         {
+            
+            /// <summary>
+            /// user id
+            /// </summary>
+            public Guid Id { get; set; }
+            
             /// <summary>
             /// The user's first name
             /// </summary>
